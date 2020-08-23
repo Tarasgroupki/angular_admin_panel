@@ -1,0 +1,80 @@
+body.container {
+  height: 100%;
+  width: 100%;
+  padding:0;
+  margin:0;
+}
+
+mat-toolbar {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background: linear-gradient(180deg, #053651 -59.15%, #011E2E 148.59%);
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.header-btn {
+  height: 100%;
+}
+
+.header-icon-button {
+  height: 100%;
+  width: 20px;
+}
+
+.header-btn-active {
+  height: 100%;
+  background: #0C62E3;
+  opacity: 0.7;
+  border-radius: 0px 0px 0px 4px;
+}
+
+.header-btn-text {
+  color: #B8D4FF;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+div.mat-tab-body-wrapper {
+  height: 400px;
+}
+
+::ng-deep .mat-tab-header {
+  position: absolute;
+  left: 550px;
+  width: 313px;
+  height: 40px;
+  background: linear-gradient(180deg, #052435 0%, #093751 77.78%);
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 38px;
+}
+
+::ng-deep .tabs .mat-tab-list .mat-tab-label {
+  background: linear-gradient(180deg, #052435 0%, #093751 77.78%);
+  border: 1px solid linear-gradient(180deg, #052435 0%, #093751 77.78%);
+  box-sizing: border-box;
+  border-radius: 38px;
+}
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+  background: #FFFFFF;
+}
+
+::ng-deep .mat-tab-label {
+  position: absolute;
+  min-width: 103px !important;
+  height: 40px !important;
+}
+
+::ng-deep .mat-tab-body {
+  height: 100%
+}

@@ -1,0 +1,85 @@
+<div class="mat-elevation-z8">
+  <div (mouseover)="hideVert()" class="header-table">
+   <!-- <p>
+      <b class="res">Список ресурсов</b>
+      <button mat-button class="body-icon-button-set">
+        + Добавить
+      </button>
+      <button mat-button class="body-icon-button-import">
+        <mat-icon>exit_to_app</mat-icon> Импортировать
+      </button>
+    </p> -->
+    <mat-form-field class="search-line">
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="select">
+      <mat-label>Favorite food</mat-label>
+      <mat-select>
+        <mat-option (click)="changeFilter(food.value)" *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-slide-toggle class="toggle">Открыть продажи</mat-slide-toggle>
+  </div>
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+      <td mat-cell (mouseover)="showVert(element.position)" *matCellDef="let element"> {{element.position}} </td>
+      <td class="table-footer" mat-footer-cell *matFooterCellDef> Total: </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+      <td mat-cell (mouseover)="showVert(element.position)" *matCellDef="let element"> {{element.name}} </td>
+      <td class="table-footer" mat-footer-cell *matFooterCellDef> </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Weight </th>
+      <td mat-cell (mouseover)="showVert(element.position)" *matCellDef="let element"> {{element.weight}} </td>
+      <td class="table-footer" mat-footer-cell *matFooterCellDef> {{dataForSorting}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Symbol </th>
+      <td mat-cell (mouseover)="showVert(element.position)" *matCellDef="let element"> {{element.symbol}} </td>
+      <td class="table-footer" mat-footer-cell *matFooterCellDef> </td>
+    </ng-container>
+
+    <ng-container matColumnDef="star">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell (mouseover)="showVert(element.position)" (click)="$event.stopPropagation()" *matCellDef="let element">
+        <div [mdePopoverTriggerFor]="appPopover" mdePopoverTriggerOn="click" #popoverTrigger="mdePopoverTrigger" [ngClass]="(show == element.position) ? 'show_vert' : 'hide_vert'" (click)="showPosition(element.position)" ><mat-icon>more_vert</mat-icon></div>
+
+        <mde-popover #appPopover="mdePopover" [mdePopoverOverlapTrigger]="false">
+          <mat-card style="max-width: 300px">
+            <mat-card-content>
+              {{ element.position }}
+              A material design popover component created using Angular version 8 with the Angular CDK.
+            </mat-card-content>
+          </mat-card>
+        </mde-popover>
+        <!-- <popover-content #myPopover
+                         title="Popover title"
+                         placement="left"
+                         [animation]="true"
+                         [closeOnClickOutside]="true" >
+          {{element.position}}
+        </popover-content> -->
+      </td>
+      <td class="table-footer" mat-footer-cell *matFooterCellDef> </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr class="example-element-row"  mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-footer-row (mouseover)="hideVert()" *matFooterRowDef="displayedColumns"></tr>
+  </table>
+
+  <!--<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>-->
+</div>

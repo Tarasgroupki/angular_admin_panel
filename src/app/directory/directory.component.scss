@@ -1,0 +1,42 @@
+.header-folder {
+  height: 200px;
+  background: linear-gradient(180deg, #DAE5F7 0%, rgba(233, 238, 242, 0) 100%);
+}
+
+.folders-list {
+  position: absolute;
+  top: 100px;
+  left: 300px;
+}
+
+.folder-info-table {
+  display: block;
+  position: absolute;
+  top: 130px;
+  left: 800px;
+  width: 500px;
+}
+
+.folder-hidden {
+  display: none;
+}
+
+.right-table {
+  width: 100%;
+}
+
+.body-icon-button-set {
+  position: absolute;
+  width: 111px;
+  height: 36px;
+  left: 277px;
+  top: 10px;
+
+  background: #3D71BF;
+  border-radius: 4px;
+}
+
+.header-dialog-window {
+  height: 40px;
+  background: #FFFFFF;
+}

@@ -1,0 +1,103 @@
+.rec-wrapper {
+  height: 500px;
+  background: linear-gradient(180deg, #DAE5F7 0%, rgba(233, 238, 242, 0) 100%);
+}
+
+.mat-elevation-z8 {
+  height: 88%;
+  width: 600px;
+}
+
+.left-table {
+  position: absolute;
+  left: 243px;
+  top: 137px;
+  width: 498px;
+  background: linear-gradient(180deg, #DAE5F7 0%, rgba(133, 138, 142, 0) 20%);
+}
+
+.right-table {
+  width: 600px;
+  margin-top: 20px;
+}
+
+.button-add {
+  position: absolute;
+  width: 172px;
+  height: 36px;
+  left: 243px;
+  top: 447px;
+
+  background: #3D71BF;
+  border-radius: 4px;
+}
+
+.button-edit {
+  position: absolute;
+  width: 96px;
+  height: 36px;
+  left: 423px;
+  top: 447px;
+
+  border: 1px solid #3D71BF;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.button-exit {
+  position: absolute;
+  width: 100px;
+  height: 36px;
+  left: 528px;
+  top: 447px;
+
+  border: 1px solid #3D71BF;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.table-res {
+  position: absolute;
+  width: 705px;
+  left: 732px;
+  top: 65px;
+
+  background: #FFFFFF;
+}
+
+.recomend-text {
+  position: relative;
+  width: 1255px;
+  left: 253px;
+  top: 25px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+
+  color: #042635;
+}
+.in-utilize-day {
+  color: #0C62E3;
+}
+
+:host ::ng-deep .mat-tab-body-wrapper {
+  height: 100%;
+  width: 800px;
+}
+
+:host ::ng-deep .mat-tab-header {
+  top: 20px;
+  left: 350px;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+mat-tab-group {
+  background: linear-gradient(180deg, #DAE5F7 0%, rgba(233, 238, 242, 0) 100%);
+}
+

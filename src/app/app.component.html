@@ -1,0 +1,29 @@
+<div class="container">
+<!--<p> -->
+  <header>
+  <mat-toolbar>
+    <button [ngClass]="router.url === '/' ? 'header-btn-active' : 'header-btn'" mat-button routerLink="/">
+      <b class="header-btn-text">Утилизация ресурсов</b>
+    </button>
+    <button [ngClass]="router.url === '/pricing' ? 'header-btn-active' : 'header-btn'" class="header-btn" mat-button routerLink="/pricing"><b class="header-btn-text">Динамическое ценообразование</b></button>
+    <button [ngClass]="router.url === '/recomendation' ? 'header-btn-active' : 'header-btn'"  mat-button routerLink="/recomendation"><b class="header-btn-text">Рекомендательный движок</b></button>
+    <!--<button class="header-btn" mat-button><b class="header-btn-text">Расписания</b></button>
+    <button class="header-btn" mat-button><b class="header-btn-text">Клиенты</b></button>-->
+    <button [ngClass]="router.url === '/directory' ? 'header-btn-active' : 'header-btn'" class="header-btn" mat-button routerLink="/directory"><b class="header-btn-text">Справочник</b></button>
+   <span class="example-spacer"></span>
+    <button mat-button class="header-icon-button">
+      <mat-icon matBadge="8" matBadgeColor="warn">mail_outline</mat-icon>
+    </button>
+    <button mat-button class="header-icon-button">
+      <mat-icon>settings</mat-icon>
+    </button>
+    <button mat-button class="header-icon-button">
+      <mat-icon>exit_to_app</mat-icon>
+    </button>
+  </mat-toolbar>
+  </header>
+<!--</p>-->
+  <body>
+<router-outlet></router-outlet>
+  </body>
+</div>
